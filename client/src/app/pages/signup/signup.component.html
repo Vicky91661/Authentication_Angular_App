@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="container">
+        <div class="signin-form">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input  [(ngModel)]="SignUpData.firstName" type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input  [(ngModel)]="SignUpData.lastName" type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="input-group">
+                    <label for="Email">Email</label>
+                    <input  [(ngModel)]="SignUpData.Email" type="email" id="Email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input  [(ngModel)]="SignUpData.Password" type="password" id="password" name="password" required>
+                </div>
+                <button (click)="onSignUp()" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

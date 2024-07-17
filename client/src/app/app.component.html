@@ -1,0 +1,17 @@
+<nav class="h-[8vh] border-b-[1px]">
+  <div class="text-white bg-gradient-to-r from-[#ff6f61] to-[#eed88e]  h-full flex items-center gap-5 justify-end pr-10">
+    @if (!isLogin) {
+      <div>
+        <button routerLink="/login" class="bg-yellow-600 px-4 py-1 rounded-lg hover:bg-slate-50 hover:text-yellow-800 hover:border-2 hover:shadow-2xl">Login</button>
+      </div>
+      <div>
+        <button  routerLink="/signup" class="bg-[#ff6f61] px-4 py-1 rounded-lg hover:bg-slate-50 hover:text-purple-700 hover:border-2 hover:shadow-2xl">Signup</button>
+      </div>
+    }@else{
+      <div>
+        <button (click)="onLogout()" class="bg-red-700 px-4 py-1 rounded-lg hover:bg-slate-50 hover:text-yellow-800 hover:border-2 hover:shadow-2xl">Logout</button>
+      </div>
+    }
+  </div>
+</nav>
+<router-outlet></router-outlet>
